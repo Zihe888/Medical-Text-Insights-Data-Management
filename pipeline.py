@@ -99,7 +99,7 @@ def predict(FileName, device, model_save_dir, model_name):
 
 def ProcessRes(f_path, **kwargs):
     
-    predict_res = kwargs['task_instance'].xcom_pull(task_ids="load_model_task")
+    predict_res = kwargs['task_instance'].xcom_pull(task_ids="make_prediction_task")
     originaldata = Originaldata(f_path)
     res_sentence = []
     start = 0
